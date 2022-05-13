@@ -6,10 +6,10 @@ import org.apache.logging.log4j.Logger;
 import java.sql.*;
 
 public class SqlConnector {
-    private static String dbName = ReadConfigFiles.GetPropertyValues("DbName");
+    private static String dbName = ReadConfigFiles.getPropertyValues("DbName");
     private static final String url = "jdbc:postgresql://localhost:5432/" + dbName;
-    private static final String User = ReadConfigFiles.GetPropertyValues("DbUser");
-    private static final String Password = ReadConfigFiles.GetPropertyValues("DbPassword");
+    private static final String User = ReadConfigFiles.getPropertyValues("DbUser");
+    private static final String Password = ReadConfigFiles.getPropertyValues("DbPassword");
 
     private static final Logger LOGGER = LogManager.getLogger(SqlConnector.class);
 

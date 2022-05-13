@@ -9,7 +9,7 @@ public class ReadConfigFiles {
 
     private static final Logger LOGGER = LogManager.getLogger(ReadConfigFiles.class);
 
-    public static String GetPropertyValues(String keyName) {
+    public static String getPropertyValues(String keyName) {
 
         Properties prop;
         String propValue = null;
