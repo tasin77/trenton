@@ -40,12 +40,15 @@ public class DriverFactory {
         if (environment.equals("remote") && browser.equals("chrome")) {
             ChromeOptions chromeOptions = new ChromeOptions();
             return new RemoteWebDriver(gridUrl, chromeOptions);
+
         } else if (environment.equals("remote") && browser.equals("firefox")) {
             FirefoxOptions firefoxOptions = new FirefoxOptions();
             return new RemoteWebDriver(gridUrl, firefoxOptions);
+
         } else if (environment.equals("remote") && browser.equals("edge")) {
             EdgeOptions edgeOptions = new EdgeOptions();
             return new RemoteWebDriver(gridUrl, edgeOptions);
+
         } else {
             WebDriverManager.chromedriver().setup();
             return new ChromeDriver();
